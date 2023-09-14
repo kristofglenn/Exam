@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Online Ticket Shop</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       TICKET SHOP
+    </header>
+    <nav>
+            <div class="topnav">
+      <a class="active" href="#home">Page 1</a>
+      <a href="#news">Page 2</a>
+      <a href="#contact">Page 3</a>
+      <a href="#about">Page 4</a>
+    </div>
+    </nav>
+    <main>
+        <center>
+        <h1>Welcome to Your Online Ticket Shop</h1>
+    </center>
+        <form action="ordersummary.php" method="post">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea><br>
+
+            <label for="cinema">Cinema to Watch:</label>
+            <select id="cinema" name="cinema">
+                <option value="Cinema 1">Cinema 1</option>
+                <option value="Cinema 2">Cinema 2</option>
+                <option value="Cinema 3">Cinema 3</option>
+                <option value="Cinema 4" selected>Cinema 4</option>
+                <option value="Cinema 5">Cinema 5</option>
+            </select><br>
+
+            <label for="ticketCount">Number of Tickets to Purchase:</label>
+            <input type="number" id="ticketCount" name="ticketCount" min="1" max="10" required><br>
+
+            <label for="addons">Add Ons (optional):</label>
+            <input type="checkbox" id="popcorn" name="addons[]" value="Popcorn">
+            <label for="popcorn">Popcorn</label>
+            <input type="checkbox" id="drink" name="addons[]" value="Drink">
+            <label for="drink">Drink</label>
+            <input type="checkbox" id="burger" name="addons[]" value="Burger">
+            <label for="burger">Burger</label><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <audio autoplay controls>
+        <source src="background-music.mp4" type="audio/mpeg">
+    </audio>
+</body>
+</html>
